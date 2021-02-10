@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import print_function
 from optparse import OptionParser
-
+import os
 ################################################################################
 # make_encode_beds.py
 #
@@ -12,6 +12,7 @@ from optparse import OptionParser
 # main
 ################################################################################
 def main():
+
     usage = 'usage: %prog [options] arg'
     parser = OptionParser(usage)
     #parser.add_option()

@@ -147,21 +147,21 @@ def main():
 
 
     if train_count > 0:
-        h5f.create_dataset('train_in', data=train_seqs)
-        h5f.create_dataset('train_out', data=train_targets)
+        h5f.create_dataset('x_train', data=train_seqs)
+        h5f.create_dataset('y_train', data=train_targets)
 
     if valid_count > 0:
-        h5f.create_dataset('valid_in', data=valid_seqs)
-        h5f.create_dataset('valid_out', data=valid_targets)
+        h5f.create_dataset('x_valid', data=valid_seqs)
+        h5f.create_dataset('y_valid', data=valid_targets)
 
     if test_count > 0:
-        h5f.create_dataset('test_in', data=test_seqs)
-        h5f.create_dataset('test_out', data=test_targets)
+        h5f.create_dataset('x_test', data=test_seqs)
+        h5f.create_dataset('y_test', data=test_targets)
         #h5f.create_dataset('test_headers', data=test_headers)
 
     elif options.valid_test:
-        h5f.create_dataset('test_in', data=valid_seqs)
-        h5f.create_dataset('test_out', data=valid_targets)
+        h5f.create_dataset('x_test', data=valid_seqs)
+        h5f.create_dataset('y_test', data=valid_targets)
         h5f.create_dataset('test_headers', data=valid_headers)
 
     if options.add_features_file:

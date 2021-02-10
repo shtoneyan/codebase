@@ -2,9 +2,9 @@
 
 /home/shush/codebase/src/preprocess_basset.sh /home/shush/codebase/preprocess/basset/er \
       /home/shush/codebase/download_data/basset/sample_beds.txt \
-      /home/shush/genomes/hg38.fa \
+      /home/shush/genomes/hg19.fa \
       1000 \
-      /home/shush/genomes/GRCh38_EBV.chrom.sizes.tsv \
+      /home/shush/genomes/human.hg19.genome \
       /home/shush/codebase/preprocess/basset/er
 
 

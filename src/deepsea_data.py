@@ -16,7 +16,7 @@ def main():
         parser.error('Must provide data path and output folder')
     else:
         data_path = sys.argv[1] # dir where deepsea_train folder is
-        output_folder = sys.argv[2] # number of labels to take
+        output_folder = sys.argv[2] # output_folder to save dataset in
 
     utils.make_directory(output_folder)
     # base_dir = utils.get_parent(files_path)
@@ -62,14 +62,15 @@ def load_set(data_fold, filepath, class_range):
 
 def save_deepsea_dataset(train, valid, test, output_dir):
     """ save to h5py dataset """
-    print("saving datset")
+    print("saving dataset")
     h5f = h5py.File(os.path.join(output_dir, 'deepsea.h5'), 'w')
-    h5f.create_dataset('X_train', data=train[0], dtype='int8')
-    h5f.create_dataset('Y_train', data=train[1], dtype='int8')
-    h5f.create_dataset('X_valid', data=valid[0], dtype='int8')
-    h5f.create_dataset('Y_valid', data=valid[1], dtype='int8')
-    h5f.create_dataset('X_test', data=test[0], dtype='int8')
-    h5f.create_dataset('Y_test', data=test[1], dtype='int8')
+    h5f.create_dataset('x_train', data=train[0], dtype='int8')
+    h5f.create_dataset('y_train', data=train[1], dtype='int8')
+    h5f.create_dataset('x_valid', data=valid[0], dtype='int8')
+    h5f.create_dataset('y_valid', data=valid[1], dtype='int8')
+    h5f.create_dataset('x_test', data=test[0], dtype='int8')
+    h5f.create_dataset('y_test', data=test[1], dtype='int8')
     h5f.close()
+
 if __name__ == '__main__':
   main()
