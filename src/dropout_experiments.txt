@@ -1,0 +1,7 @@
+/home/shush/codebase/src/trainer.py preprocess/lua_deepsea/deepsea.h5 deepsea run_model/lua_deepsea_deepsea -o deepsea.h5
+/home/shush/codebase/src/trainer.py preprocess/lua_deepsea/deepsea.h5 basset run_model/lua_deepsea_basset -o basset.h5
+/home/shush/codebase/src/trainer.py preprocess/lua_deepsea/deepsea.h5 basset_mod_dr_bn run_model/lua_deepsea_basset_mod_dr_bn -o basset_mod_dr_bn.h5
+
+/home/shush/codebase/src/trainer.py preprocess/basset/er.h5 deepsea run_model/basset_deepsea -o deepsea.h5
+/home/shush/codebase/src/trainer.py preprocess/basset/er.h5 basset run_model/basset_basset -o basset.h5
+/home/shush/codebase/src/trainer.py preprocess/basset/er.h5 basset_mod_dr_bn run_model/basset_basset_mod_dr_bn -o basset_mod_dr_bn.h5
